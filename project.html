@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JTMK - Projects</title>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #17a2b8; 
+      --secondary-color: #e0f2f7; 
+      --text-color: #343a40;
+      --accent-color: #6c757d; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .social-icons a img {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .social-icons a img:hover {
+      opacity: 1;
+    }
+
+    .page-content {
+      margin-left: 70px;
+      margin-right: 10px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      padding: 15px 0;
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .header-flex img {
+      height: 50px;
+    }
+    .header-flex h1 {
+      margin: 0;
+      font-size: 2em;
+      color: white;
+    }
+
+    .ui-navbar ul {
+      background-color: darken(var(--primary-color), 10%);
+      border: none;
+    }
+    .ui-navbar li a {
+      color: black !important; 
+      text-shadow: none !important;
+    }
+    .ui-btn-active {
+      background-color: var(--accent-color) !important;
+      color: white !important;
+      border: none !important;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      font-size: 2em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px 0;
+      background-color: white; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: flex-start; 
+      gap: 20px;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      flex-grow: 1;
+    }
+
+    .project-info h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.3em;
+      color: var(--text-color); 
+      text-align: left;
+    }
+
+    .project-info p {
+      margin: 0;
+      font-size: 1em;
+      color: #666; 
+      text-align: left;
+    }
+
+    .project-info a {
+      display: inline-block;
+      background-color: var(--accent-color); 
+      color: black !important; 
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .project-info a:hover {
+      background-color: darken(var(--accent-color), 10%);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary-color); 
+      margin-bottom: 25px;
+      font-size: 2em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-role="footer"] {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+<div class="social-icons">
+  <a href="https://www.linkedin.com/in/yourusername" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
+  <a href="https://github.com/yourusername" target="_blank"><img src="img/github.jpg" alt="GitHub"></a>
+  <a href="https://twitter.com/yourusername" target="_blank"><img src="img/twitter.png" alt="Twitter"></a>
+  <a href="https://www.youtube.com/@yourusername" target="_blank"><img src="img/youtube.jpg" alt="YouTube"></a>
+  <a href="https://www.instagram.com/yourusername" target="_blank"><img src="img/instagram.jpg" alt="Instagram"></a>
+</div>
+
+<div data-role="header" data-position="fixed">
+  <div class="header-flex">
+    <img src="img/jtmk.jpg">
+    <h1>JTMK</h1>
+  </div>
+  <div data-role="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html" class="ui-btn-active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<div data-role="content" class="page-content">
+  <h2>Our Projects</h2>
+
+  <div class="project-card">
+    <img src="img/project1.png" alt="Project 1">
+    <div class="project-info">
+      <h2>Network Architecture of a Fog–Cloud-Based Smart Farming System</h2>
+      <p><a href="project/project1.pdf" target="_blank" data-role="button">View Report</a></p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/project2.png" alt="Project 2">
+    <div class="project-info">
+      <h2>Augmented Reality Based Mobile App for a University Campus</h2>
+      <p><a href="project/project2.pdf" target="_blank" data-role="button">View Report</a></p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/project3.png" alt="Project 3">
+    <div class="project-info">
+      <h2>E-voting System using Cloud-based Hybrid Blockchain Technology</h2>
+      <p><a href="project/project3.pdf" target="_blank" data-role="button">View Report</a></p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/project4.png" alt="Project 4">
+    <div class="project-info">
+      <h2>Application of Firebase in Android App Development - A Study</h2>
+      <p><a href="project/project4.pdf" target="_blank" data-role="button">View Report</a></p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/project5.png" alt="Project 5">
+    <div class="project-info">
+      <h2>Big Data and IoT in Smart Transportation System</h2>
+      <p><a href="project/project5.pdf" target="_blank" data-role="button">View Report</a></p>
+    </div>
+  </div>
+</div>
+
+<div data-role="footer" data-position="fixed">
+  <h4>Copyright © DDT4B S2 2024/2025. All rights reserved.</h4>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JTMK - Contact</title>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).on("mobileinit", function () {
+      $.mobile.ajaxEnabled = false;
+    });
+  </script>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #17a2b8; 
+      --secondary-color: #e0f2f7; 
+      --text-color: #343a40;
+      --accent-color: #6c757d; 
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .social-icons a img {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .social-icons a img:hover {
+      opacity: 1;
+    }
+
+    .page-content {
+      margin-left: 70px;
+      margin-right: 10px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+      padding: 15px 0;
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .header-flex img {
+      height: 50px;
+    }
+    .header-flex h1 {
+      margin: 0;
+      font-size: 2em;
+      color: white; 
+    }
+
+    .ui-navbar ul {
+      background-color: darken(var(--primary-color), 10%);
+      border: none;
+    }
+    .ui-navbar li a {
+      color: black !important;
+      text-shadow: none !important;
+    }
+    .ui-btn-active {
+      background-color: var(--accent-color) !important;
+      color: white !important;
+      border: none !important;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-block {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      max-width: 450px;
+      width: 90%;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    .contact-block h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: var(--text-color);
+      font-size: 1.5em;
+    }
+    .contact-block a[data-role="button"] {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1em;
+      margin: 8px 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .contact-block a[data-role="button"]:hover {
+      background-color: darken(var(--primary-color), 10%);
+      transform: scale(1.03);
+    }
+    .contact-block a[data-role="button"]:active {
+      transform: scale(0.97);
+    }
+
+    [data-role="footer"] {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+<div class="social-icons">
+  <a href="https://www.linkedin.com/in/yourusername" target="_blank">
+    <img src="img/linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/yourusername" target="_blank">
+    <img src="img/github.jpg" alt="GitHub">
+  </a>
+  <a href="https://twitter.com/yourusername" target="_blank">
+    <img src="img/twitter.png" alt="Twitter">
+  </a>
+  <a href="https://www.youtube.com/@yourusername" target="_blank">
+    <img src="img/youtube.jpg" alt="YouTube">
+  </a>
+  <a href="https://www.instagram.com/yourusername" target="_blank">
+    <img src="img/instagram.jpg" alt="Instagram">
+  </a>
+</div>
+
+<div data-role="page" id="contact">
+
+  <div data-role="header" data-position="fixed">
+    <div class="header-flex">
+      <img src="img/jtmk.jpg" alt="JTMK Logo">
+      <h1>JTMK</h1>
+    </div>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html" class="ui-btn-active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="content" class="page-content">
+    <h2>Contact Us</h2>
+
+    <div class="contact-block">
+      <h3>Yoges Mohan</h3>
+      <a href="tel:0122107634" data-role="button">Call</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yogesmohan@gmail.com" target="_blank" data-role="button">Email</a>
+      <a href="https://wa.me/60122107634" target="_blank" data-role="button">WhatsApp</a>
+    </div>
+
+    <div class="contact-block">
+      <h3>Syahida Husna</h3>
+      <a href="tel:01131090472" data-role="button">Call</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=syahidahusna78@gmail.com" target="_blank" data-role="button">Email</a>
+      <a href="https://wa.me/601131090472" target="_blank" data-role="button">WhatsApp</a>
+    </div>
+
+    <div class="contact-block">
+      <h3>Nurul Hanis</h3>
+      <a href="tel:0199602691" data-role="button">Call</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hanis.ibrahim16@gmail.com" target="_blank" data-role="button">Email</a>
+      <a href="https://wa.me/60199602691" target="_blank" data-role="button">WhatsApp</a>
+    </div>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h4>© DDT4B S2 2024/2025. All rights reserved.</h4>
+  </div>
+
+</div>
+</body>
+</html>
